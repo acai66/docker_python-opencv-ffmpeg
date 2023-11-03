@@ -157,7 +157,7 @@ RUN \
     rm opencv_contrib.zip
 
 # Install NVidia video codec
-RUN wget https://github.com/acai66/docker_python-opencv-ffmpeg/releases/download/asserts/Video_Codec_SDK_12.1.14.zip -O Video_Codec_SDK_12.1.14.zip --progress=bar:force:noscroll --no-check-certificate ./
+RUN wget https://github.com/acai66/docker_python-opencv-ffmpeg/releases/download/asserts/Video_Codec_SDK_12.1.14.zip -O Video_Codec_SDK_12.1.14.zip --progress=bar:force:noscroll --no-check-certificate
 RUN unzip Video_Codec_SDK_12.1.14.zip
 RUN cd Video_Codec_SDK_12.1.14 && cp Interface/* /usr/local/cuda/targets/x86_64-linux/include/ && \
 cp Lib/linux/stubs/x86_64/* /usr/local/cuda/targets/x86_64-linux/lib/stubs/ && \
